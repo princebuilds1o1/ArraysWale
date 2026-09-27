@@ -143,27 +143,53 @@
 //     }
 // }
 
-import java.util.Arrays;
-//return 0 if number is odd and if it is even return 1
+// import java.util.Arrays;
+// //return 0 if number is odd and if it is even return 1
 
-// input: 2,4,5,6,80,24,57,12,26
-//output: 1,1,0,1,1,1,0,1,1
+// // input: 2,4,5,6,80,24,57,12,26
+// //output: 1,1,0,1,1,1,0,1,1
+
+// public class Array{
+//     public static int[] checknum(int[] arr) {
+//         for (int i = 0; i < arr.length; i++) {
+//             if(arr[i] % 2 == 0){
+//                 arr[i] = 1 ;
+//             }else{
+//                 arr[i] = 0 ;
+//             }
+//         }
+//         return arr;
+        
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {2,4,5,6,80,24,57,12,26};
+//         int[] result = checknum(arr);
+//         System.out.println(Arrays.toString(result));
+//     }
+// }
+
+
+import java.util.Arrays;
+import java.util.*;
+
+
+
 
 public class Array{
-    public static int[] checknum(int[] arr) {
+    public static int[] checkPoint(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] % 2 == 0){
-                arr[i] = 1 ;
-            }else{
-                arr[i] = 0 ;
+                arr[i] += 5 ;
+            }else if(arr[i] % 2 != 0){
+                arr[i] += 1 ;
             }
         }
-        return arr;
+        return arr ;
         
     }
     public static void main(String[] args) {
-        int[] arr = {2,4,5,6,80,24,57,12,26};
-        int[] result = checknum(arr);
-        System.out.println(Arrays.toString(result));
+        int[] arr = {10 ,21, 30 ,49 ,78};
+        int[] result = checkPoint(arr);
+        System.out.println("the result treasury is :"+Arrays.toString(result));
+}       
     }
-}
