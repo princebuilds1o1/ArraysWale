@@ -125,20 +125,45 @@
 // input: 2,4,5,6,80,24,57,12,26
 //output: 28
 
+// public class Array{
+//     public static int addIndexes(int[] arr) {
+//         int sum = 0 ;
+//         for (int i = 0; i < arr.length; i++) {
+//             if(arr[i] % 2 == 0){ //arr[i] means element stored at i
+//                  sum += i ;
+//             }
+//         }
+//         return sum ;
+        
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {2,4,5,6,80,24,57,12,26};
+//         int result = addIndexes(arr);
+//         System.out.println("Sum of even number is"+result);
+//     }
+// }
+
+import java.util.Arrays;
+//return 0 if number is odd and if it is even return 1
+
+// input: 2,4,5,6,80,24,57,12,26
+//output: 1,1,0,1,1,1,0,1,1
+
 public class Array{
-    public static int addIndexes(int[] arr) {
-        int sum = 0 ;
+    public static int[] checknum(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i] % 2 == 0){ //arr[i] means element stored at i
-                 sum += i ;
+            if(arr[i] % 2 == 0){
+                arr[i] = 1 ;
+            }else{
+                arr[i] = 0 ;
             }
         }
-        return sum ;
+        return arr;
         
     }
     public static void main(String[] args) {
         int[] arr = {2,4,5,6,80,24,57,12,26};
-        int result = addIndexes(arr);
-        System.out.println("Sum of even number is"+result);
+        int[] result = checknum(arr);
+        System.out.println(Arrays.toString(result));
     }
 }
