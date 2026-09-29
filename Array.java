@@ -169,27 +169,92 @@
 // }
 
 
+// import java.util.Arrays;
+// import java.util.*;
+
+
+
+
+// public class Array{
+//     public static int[] checkPoint(int[] arr) {
+//         for (int i = 0; i < arr.length; i++) {
+//             if(arr[i] % 2 == 0){
+//                 arr[i] += 5 ;
+//             }else if(arr[i] % 2 != 0){
+//                 arr[i] += 1 ;
+//             }
+//         }
+//         return arr ;
+        
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {10 ,21, 30 ,49 ,78};
+//         int[] result = checkPoint(arr);
+//         System.out.println("the result treasury is :"+Arrays.toString(result));
+// }       
+//     }
+
+// import java.util.*;
+// //Add Even Numbers in an array: 
+// // input: 2,4,5,6,80,24,57,12,26
+// //output: 154
+
+// public class Array{
+//     public static int addnum(int[] arr) {
+//         int sum = 0 ;
+//         for (int i = 0; i < arr.length; i++) {
+//             if(arr[i] % 2 == 0){
+//                 sum += arr[i] ;
+//             }
+//         }
+//         return sum ;
+        
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {2,4,5,6,80,24,57,12,26};
+//         int result = addnum(arr);
+//         System.out.println(result);
+//     }
+// }
+
+
+
+
+//show second largest number
+
 import java.util.Arrays;
-import java.util.*;
-
-
 
 
 public class Array{
-    public static int[] checkPoint(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] % 2 == 0){
-                arr[i] += 5 ;
-            }else if(arr[i] % 2 != 0){
-                arr[i] += 1 ;
-            }
-        }
-        return arr ;
-        
+    public static int[] secondlar(int[] arr) {
+       int max1 = arr[0] ;
+       int max2 = arr[0] ;
+       int max3 = arr[0];
+       for (int i = 0; i < arr.length; i++) {
+        if(arr[i] > max1 ){
+            
+            max2 = max1 ;
+            max3 = max2 ;
+            max1 = arr[i] ;
+        }else if (arr[i] > max2 && arr[i] != max1 && arr[i]< max1  ){
+           max3 = max2 ;
+           max2 = arr[i];
+     }else if(arr[i] > max3 && arr[i] != max2 && arr[i] < max2){
+           max3 = arr[i] ;
+     }
+  }
+      int[] arr1 = new int[] {max1, max2,max3};
+        return arr1 ;
+       
+         
+}
+
+ public static void main(String[] args) { 
+ int[] arr = {2,4,5,6,20,24,57,57,12,26,26};
+ int[] result = secondlar(arr);
+ System.out.println( Arrays.toString(result));
+
     }
-    public static void main(String[] args) {
-        int[] arr = {10 ,21, 30 ,49 ,78};
-        int[] result = checkPoint(arr);
-        System.out.println("the result treasury is :"+Arrays.toString(result));
-}       
-    }
+}
+    
+    
